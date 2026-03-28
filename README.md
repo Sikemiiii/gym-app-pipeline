@@ -13,22 +13,15 @@ graph TD;
     B -->|Tests Fail| D[Pipeline Halts - Alert Sent];
     C --> E[Build Frontend Docker Image];
     C --> F[Build Backend Docker Image];
-    🛠️ Tools & Technologies Used
-Source Control: Git & GitHub
+## 🛠️ Tools & Technologies Used
+* **Source Control:** Git & GitHub
+* **CI/CD Automation:** GitHub Actions
+* **API Testing / QA:** Postman & Newman (CLI)
+* **Containerization:** Docker
+* **Environment:** Node.js, Alpine Linux
 
-CI/CD Automation: GitHub Actions
-
-API Testing / QA: Postman & Newman (CLI)
-
-Containerization: Docker
-
-Environment: Node.js, Alpine Linux
-
-🚀 Pipeline Steps
-Source Trigger: The workflow triggers automatically on any push to the main branch.
-
-Environment Setup: Provisions an ubuntu-latest runner and configures Node.js.
-
-Automated QA Validation: Executes a Postman collection via Newman to validate critical endpoints (e.g., Paystack payment integration).
-
-Conditional Build: Upon successful test validation, the pipeline builds lightweight, secure Docker images for both the frontend (nginx:alpine) and the backend (node:18-alpine).
+## 🚀 Pipeline Steps
+1. **Source Trigger:** The workflow triggers automatically on any push to the `main` branch.
+2. **Environment Setup:** Provisions an `ubuntu-latest` runner and configures Node.js.
+3. **Automated QA Validation:** Executes a Postman collection via Newman to validate critical endpoints (e.g., Paystack payment integration).
+4. **Conditional Build:** Upon successful test validation, the pipeline builds lightweight, secure Docker images for both the frontend (`nginx:alpine`) and the backend (`node:18-alpine`).
