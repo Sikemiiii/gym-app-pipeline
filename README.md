@@ -13,6 +13,7 @@ graph TD;
     B -->|Tests Fail| D[Pipeline Halts - Alert Sent];
     C --> E[Build Frontend Docker Image];
     C --> F[Build Backend Docker Image];
+    
 ## 🛠️ Tools & Technologies Used
 * **Source Control:** Git & GitHub
 * **CI/CD Automation:** GitHub Actions
